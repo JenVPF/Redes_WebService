@@ -1,6 +1,8 @@
-## Redes_WebService
+# Redes_WebService
 
-#Integrantes
+Web Service SOAP y REST
+
+## Integrantes
 + Jennifer Portiño
 + Esteban Rojas
 + Kevin Salinas
