@@ -1,0 +1,110 @@
+html{
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   color: rgb(255, 255, 255);
+}
+
+
+body{
+   background-image: url(../../build/img/287216.jpg);
+   background-size: cover;
+   margin: 0;
+   padding: 0 ;   
+}
+
+
+
+/**
+  * Header
+  */
+.nav{
+   text-align: right;
+   list-style: none;
+   margin: 0 30px;
+   padding: 20px 0 20px 0 ;
+}
+
+.nav li{
+   display: inline-block;
+   padding: 0 30px 0 0;
+   font-size: 20px;
+}
+.nav > li > a{
+   margin-top: 0;
+   color: white;
+   text-align: right;
+   text-decoration: none;
+}
+
+.nav > li > a:hover{
+   color: rgb(0, 255, 149);
+   border-top: 2px solid rgb(0, 255, 149);
+
+}
+
+.logo{
+   float: left;
+   padding-left: 30px;
+   margin-top: -30px;
+}
+
+.titulo{
+   text-align: center;
+   padding-top: 60px;
+   padding-right: 0;
+}
+
+.titulo > h1{
+   font-size: 60px;
+   text-align: center;
+   text-decoration: underline overline dotted white;
+   color: rgb(255, 255, 255);
+}
+
+.container{
+   max-width: 550px;
+   background-color: rgba(0,0,0,0.8);
+   margin: 0 auto;
+   display: flex;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.btn-inicio{
+   display: flex;
+   padding: 0 60px 0 50px;
+}
+
+.btn-inicio > a{
+   text-decoration: none;
+   color: azure;
+   text-align: center;
+   font-size: 2em;
+   border: 1px solid white;
+   border-radius: 10px;
+   padding: 25px;
+}
+
+
+.input{
+   background: none;
+   color: white;
+   font-size: 20px;
+   padding-left: 20px;
+   border: 2px solid rgb(0, 162, 255);
+   border-radius: 5px;
+   width: 300px;
+   height: 50px;
+}
+
+.btn{
+   top:20px;
+   background-color: rgb(41, 103, 238);
+   color: black;
+   font-size: 30px;
+   border: 2px solid rgb(0, 162, 255);
+   width: 200px;
+   height: 50px;
+   border-radius: 10px;
+
+}
