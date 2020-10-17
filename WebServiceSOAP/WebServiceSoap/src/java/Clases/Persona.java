@@ -1,5 +1,6 @@
 package Clases;
 
+import Funciones.arregloNombre;
 /**
  *
  * @author EstebanPC
@@ -50,29 +51,15 @@ public class Persona {
     }
     
     public String saludoPersona(){
+        arregloNombre arreglo = new arregloNombre();
+        
+        String nombreArr = arreglo.nombres(this.nombre);
+        String apellidopArr = arreglo.nombres(this.apellido_p);
+        String apellidomArr = arreglo.nombres(this.apellido_m);
+        
         String mensaje;
-        //String nombre_i = this.nombre.substring(0,1).toUpperCase();
-        //String nombre_resto = this.nombre.substring(1,this.nombre.length()).toLowerCase();
-        String nombre_saludo = this.nombre.toLowerCase();
-        char[] caracteres = nombre_saludo.toCharArray();
-        caracteres[0] = Character.toUpperCase(caracteres[0]);
-        for(int i = 0; i < nombre_saludo.length()-2; i++){
-            if(caracteres[i] == ' '){
-                caracteres[i+1] = Character.toUpperCase(caracteres[i+1]);
-            }
-        }
-        String nombre_arreglado = new String(caracteres);
-        
-        String apellidop_i = this.apellido_p.substring(0,1).toUpperCase();
-        String apellidop_resto = this.apellido_p.substring(1,this.apellido_p.length()).toLowerCase();
-        
-        String apellidom_i = this.apellido_m.substring(0,1).toUpperCase();
-        String apellidom_resto = this.apellido_m.substring(1,this.apellido_m.length()).toLowerCase();
-        
-        
-        
-        mensaje = nombre_arreglado + " " + apellidop_i + apellidop_resto + " " + apellidom_i + apellidom_resto;  
-        
+        mensaje = nombreArr + " " + apellidopArr + " " + apellidomArr;
         return mensaje;
+
     }  
 }
