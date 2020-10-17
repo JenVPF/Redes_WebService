@@ -6,14 +6,14 @@ Web Service REST hecho en_
 
 ## Integrantes ✒️
 
-+ **Esteban Rojas
-+ **Kevin Salinas
-+ **Diego Tapia
-+ **Jennifer Portiño
++ **Esteban Rojas**
++ **Kevin Salinas**
++ **Diego Tapia**
++ **Jennifer Portiño**
 
 ### Instrucciones de prueba 🔧
 
-SOAP: 
+**SOAP:**
 + Entrar a la carpeta Tomcat y a la carpeta bin 
 + Ejecutar el startup.bat, con eso se levanta el web service Java
 + Mover la carpeta del proyecto a htdocs en xampp 
