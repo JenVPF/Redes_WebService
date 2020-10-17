@@ -25,17 +25,29 @@
 
         <div class="container">
         <form action="nombre.php" name="formulario2" method="POST" autocomplete="off">
-            <h2>Ingrese corerectamente los datos</h2>
-            <input type="text" name="apellido_p" id="apellido_p" placeholder="Ap_Paterno">
-            <input type="text" name="apellido_m" id="apellido_m" placeholder="Ap_Materno">
-            <input type="text" name="nombre" id="nombre" placeholder="Nombres">
-            <select name="genero" id="genero">
+        <div class="logmod__heading">
+            <h2>Ingrese correctamente los datos:</h2>
+
+        
+        <div class="prueba">
+            <input class="input" type="text" name="apellido_p" id="apellido_p" placeholder="Apellido Paterno">
+            <input class="input" type="text" name="apellido_m" id="apellido_m" placeholder="Apellido Materno">
+            <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombres">
+            <select class="select" name="genero" id="genero">
                 <option name="M" value="M">M</option>
                 <option name="F" value="F">F</option>
             </select>
-            <input type="submit" name="enviar" id="enviar">
+        </div>
+        </div>
+
+
+        <div class="nav li">
+            <input class="btn" type="submit" name="Enviar" value="Enviar">
+            <!--<input type="submit" name="enviar" id="enviar">
+        -->
             
         </form>
+
         </div>
         <?php
         $cliente = new SoapClient('http://localhost:8080/WebServiceSoap/WebService_Redes?WSDL');

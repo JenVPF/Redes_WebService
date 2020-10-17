@@ -19,6 +19,7 @@
          </ul>
       </header>
 
+      
       <div class="titulo">
          <h1>Verificación de Rut</h1>
       </div>
