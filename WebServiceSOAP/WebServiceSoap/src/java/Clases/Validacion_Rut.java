@@ -26,7 +26,7 @@ public class Validacion_Rut {
     
     public Boolean Validar(){
         Boolean devuelve = false;
-        if(this.rut.equals("")){
+        if(this.rut.equals("")|| this.rut.equals("k") || this.rut.equals("kkk") || this.rut.equals("kkkk")){
             return false;
         }
         else{

@@ -27,7 +27,7 @@
       <div class="container">
          <form name="formulario" method="POST" action="rut.php" autocomplete="off">  
          <?php
-            echo '<input class="input" type="text" name="rut" id="rut" placeholder="Ingrese Rut">
+            echo '<input class="input" type="text" name="rut" id="rut" onkeypress="return validaNumericos(event)" placeholder="Ingrese Rut">
                   <input class="btn" type="submit" name="enviar" value="Verificar">';
 
             $cliente = new SoapClient('http://localhost:8080/WebServiceSoap/WebService_Redes?wsdl');
@@ -49,7 +49,7 @@
          
       </div>
 
-      
+      <script src="../scripts/validaNumeros.js"></script>
    </body>
 </html>
 
