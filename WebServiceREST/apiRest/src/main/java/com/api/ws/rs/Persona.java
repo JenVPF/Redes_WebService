@@ -13,6 +13,21 @@ public class Persona {
         this.apellido_m = apellido_m;
         this.genero = genero;
     }
+    
+    public class arregloNombre {
+        public String nombres(String argumento){
+            String nombre_saludo = argumento.toLowerCase();
+            char[] caracteres = nombre_saludo.toCharArray();
+            caracteres[0] = Character.toUpperCase(caracteres[0]);
+            for(int i = 0; i < nombre_saludo.length()-2; i++){
+                if(caracteres[i] == ' '){
+                    caracteres[i+1] = Character.toUpperCase(caracteres[i+1]);
+                }
+            }
+            String nombre_arreglado = new String(caracteres);
+            return nombre_arreglado;
+        }    
+    }
 
     public String getPersona() {
 		return persona;
