@@ -25,47 +25,43 @@
 
         <div class="container">
         <form action="nombre.php" name="formulario2" method="POST" autocomplete="off">
-        <div class="logmod__heading">
             <h2>Ingrese correctamente los datos:</h2>
+            <div class="formu">
+                <?php
+                    echo '<input class="input" type="text" name="apellido_p" id="apellido_p" placeholder="Apellido Paterno">
+                          <input class="input" type="text" name="apellido_m" id="apellido_m" placeholder="Apellido Materno">
+                          <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombres">
+                          <select class="select" name="genero" id="genero">
+                              <option name="M" value="M"> M </option>
+                              <option name="F" value="F"> F </option>
+                          </select> 
+                            <input class="btn2" type="submit" name="enviar" value="Enviar">
+                           
+                        </div>';
+                        
 
-        
-        <div class="prueba">
-            <input class="input" type="text" name="apellido_p" id="apellido_p" placeholder="Apellido Paterno">
-            <input class="input" type="text" name="apellido_m" id="apellido_m" placeholder="Apellido Materno">
-            <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombres">
-            <select class="select" name="genero" id="genero">
-                <option name="M" value="M">M</option>
-                <option name="F" value="F">F</option>
-            </select>
-        </div>
-        </div>
-
-
-        <div class="nav li">
-            <input class="btn" type="submit" name="Enviar" value="Enviar">
-            <!--<input type="submit" name="enviar" id="enviar">
-        -->
-            
+                    $cliente = new SoapClient('http://localhost:8080/WebServiceSoap/WebService_Redes?WSDL');
+                    if(isset($_POST['enviar'])){
+                        $nombre_ingresado = $_POST['nombre'];
+                        $apellido_p_ingresado = $_POST['apellido_p'];
+                        $apellido_m_ingresado = $_POST['apellido_m'];
+                        $genero_ingresado = $_POST['genero'];
+                        $resultado = $cliente->saludo(["nombre" => $nombre_ingresado,
+                                                        "apellido_p" => $apellido_p_ingresado, 
+                                                        "apellido_m" => $apellido_m_ingresado,
+                                                        "genero" => $genero_ingresado
+                                                        ])->return;
+                        echo '<div class="mensaje_saludo">' .$resultado .'</div>';
+                    }
+                    else{
+                        echo " ";
+                    }
+                    ?>
+                
+                  
         </form>
 
         </div>
-        <?php
-        $cliente = new SoapClient('http://localhost:8080/WebServiceSoap/WebService_Redes?WSDL');
-        if(isset($_POST['enviar'])){
-            $nombre_ingresado = $_POST['nombre'];
-            $apellido_p_ingresado = $_POST['apellido_p'];
-            $apellido_m_ingresado = $_POST['apellido_m'];
-            $genero_ingresado = $_POST['genero'];
-            $resultado = $cliente->saludo(["nombre" => $nombre_ingresado,
-                                            "apellido_p" => $apellido_p_ingresado, 
-                                            "apellido_m" => $apellido_m_ingresado,
-                                            "genero" => $genero_ingresado
-                                            ])->return;
-            echo $resultado;
-        }
-        else{
-            echo " ";
-        }
-        ?>
+        
     </body>
 </html>

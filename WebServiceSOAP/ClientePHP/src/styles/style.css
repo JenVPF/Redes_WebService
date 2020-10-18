@@ -12,7 +12,6 @@ body{
 }
 
 
-
 /**
   * Header
   */
@@ -50,12 +49,22 @@ body{
 .titulo{
    text-align: center;
    padding-top: 60px;
-   padding-right: 0;
 }
 
 .titulo > h1{
    font-size: 60px;
    text-align: center;
+   text-decoration: underline overline dotted white;
+   color: rgb(255, 255, 255);
+}
+
+.titulo2{
+   margin-left: 36%;
+   padding-top: 60px;
+}
+
+.titulo2 > h1{
+   font-size: 60px;
    text-decoration: underline overline dotted white;
    color: rgb(255, 255, 255);
 }
@@ -68,6 +77,10 @@ body{
    padding: 30px;
    border-radius: 10px;
    box-shadow: 0 0 10px rgba(0,0,0,1);
+}
+
+.container h2{
+   text-align: center;
 }
 
 .btn-inicio{
@@ -106,35 +119,70 @@ body{
    width: 200px;
    height: 50px;
    border-radius: 10px;
-
+   cursor: pointer;
+   outline: none;
 }
 
-.prueba select{
-   top:20px;
-   background-color: rgb(41, 103, 238, 0.8);
+.btn2{
+   margin-top:20px;
+   background-color: rgba(46, 99, 214, 0.8);
    color: white;
    font-size: 30px;
    border: 2px solid rgb(0, 162, 255);
-   width: 100px;
+   width: 300px;
+   height: 50px;
+   border-radius: 10px;
+   cursor: pointer;
+   outline: none;
+}
+
+.formu {
+   width: 400px;
+   padding: 30px;
+   margin:auto;
+   text-align: center;
+ }
+
+
+ .formu input{
+   padding: 5px;
+   margin-top: 10px;
+   outline: none;
+}
+
+.formu select{
+   top:20px;
+   background-color: rgb(0, 0, 0, 0.8);
+   color: white;
+   text-align: center;
+   font-size: 30px;
+   border: 2px solid rgb(0, 162, 255);
+   width: 40%;
    height: 50px;
    border-radius: 10px;
    padding: 4px;
    margin-top: 10px;
+   outline: none;
 
 }
 
-.prueba input{
-   padding: 4px;
-   margin-top: 10px;
-}
+ .mensaje{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(0, 255, 34);
+ }
 
-.prueba{
-   margin: 8px solid white;
-   padding: 8px 0 8px 0;
-   
-}
-
-.logmod__heading {
+ .mensaje2{
+   padding-top: 10px;
    text-align: center;
-   padding: 12px 0 12px 0;
+   font-size: 50px;
+   color: brown;
+ }
+
+ .mensaje_saludo{
+   padding-top: 10px;
+   text-align: center;
+   font-size: 30px;
+   color: rgb(42, 165, 165)
  }

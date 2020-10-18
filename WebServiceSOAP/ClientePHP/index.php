@@ -15,12 +15,12 @@
             </ul>
         </header>
         
-        <div class="titulo">
+        <div class="titulo2">
             <h1>Web Services Soap</h1>
         </div>
         
         <div class="container">
-            
+        
             <div class="btn-inicio">
             <a href="src/pages/rut.php">Verificar Rut</a>
             </div>

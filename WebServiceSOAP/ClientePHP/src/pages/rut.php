@@ -4,7 +4,7 @@
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <title>Soap</title>
-       <link rel="stylesheet" href="../styles/style.css">
+       <link rel="stylesheet" href="../styles/style.css">  
    </head>
    <body>
       <header> 
@@ -25,23 +25,31 @@
       </div>
 
       <div class="container">
-         <form name="formulario" method="POST" action="rut.php" autocomplete="off">
-            <input class="input" type="text" name="rut" id="rut" placeholder="Ingrese Rut">
-            <input class="btn" type="submit" name="enviar" value="Verificar">
+         <form name="formulario" method="POST" action="rut.php" autocomplete="off">  
+         <?php
+            echo '<input class="input" type="text" name="rut" id="rut" placeholder="Ingrese Rut">
+                  <input class="btn" type="submit" name="enviar" value="Verificar">';
+
+            $cliente = new SoapClient('http://localhost:8080/WebServiceSoap/WebService_Redes?wsdl');
+            if(isset($_POST['enviar'])){
+                $rut_ingresado = $_POST['rut'];
+                $resultado = $cliente->verificador(["rut" => $rut_ingresado])->return;
+                if($resultado == "Rut ingresado es Válido"){
+                   echo '<div class="mensaje">'.$resultado .'</div>';
+                }
+                else{
+                  echo '<div class="mensaje2">'.$resultado .'</div>';
+                }
+            }
+            else{
+                echo " ";
+            }
+         ?>
          </form>
+         
       </div>
 
-      <?php
-       $cliente = new SoapClient('http://localhost:8080/WebServiceSoap/WebService_Redes?wsdl');
-       if(isset($_POST['enviar'])){
-           $rut_ingresado = $_POST['rut'];
-           $resultado = $cliente->verificador(["rut" => $rut_ingresado])->return;
-           echo $resultado;
-       }
-       else{
-           echo " ";
-       }
-       ?>
+      
    </body>
 </html>
 
