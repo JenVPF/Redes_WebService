@@ -25,12 +25,12 @@ public class WebService_Redes {
         validacion = new Validacion_Rut(rut);
         if(validacion.Validar()==true){
             String mensaje;
-            mensaje= "Rut ingresado es Váslido";
+            mensaje= "Rut ingresado es Válido";
             return mensaje;
         }
         else{
             String mensaje2;
-            mensaje2 = "Rut Inválido";
+            mensaje2 = "Rut Inválido, intente con un nuevo Rut";
             return mensaje2;
         }    
     }

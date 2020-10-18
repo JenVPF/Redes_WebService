@@ -52,7 +52,11 @@ public class Persona {
     
     public String saludoPersona(){
         arregloNombre arreglo = new arregloNombre();
-        
+        String mensaje2;
+        mensaje2 = "Ingrese todos los campos por favor";
+        if(this.nombre.equals("") || this.apellido_p.equals("") || this.apellido_m.equals("")){
+            return mensaje2;
+        }
         String nombreArr = arreglo.nombres(this.nombre);
         String apellidopArr = arreglo.nombres(this.apellido_p);
         String apellidomArr = arreglo.nombres(this.apellido_m);
