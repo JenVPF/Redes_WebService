@@ -14,6 +14,8 @@ Web Service REST hecho en_
 ### Instrucciones de prueba 🔧
 
 **SOAP:**
+>Importante!!\
+Tomcat: Se solicita tener configurado el server de tomcat en el puerto 8080
 + Entrar a la carpeta donde tiene ubicado el Tomcat y a la carpeta bin 
 + Ejecutar el startup.bat, con eso se levanta el web service Java
 + Mover la carpeta del proyecto a htdocs en xampp 
@@ -21,7 +23,6 @@ Web Service REST hecho en_
 ```
 Redes_WebService/WebServiceSOAP/ClientePHP/
 ```
->Tomcat
-Se solicita tener configurado el server de tomcat en el puerto 8080
+
 
 **REST:**
