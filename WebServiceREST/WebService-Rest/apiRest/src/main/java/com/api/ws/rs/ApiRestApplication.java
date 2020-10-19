@@ -14,3 +14,4 @@ public class ApiRestApplication implements WebMvcConfigurer {
         registry.addMapping("/**");
     }
 }
+
