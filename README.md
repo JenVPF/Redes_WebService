@@ -1,8 +1,6 @@
 # Redes_WebService
 
-_Web Service SOAP y REST, que valida un rut y solicita el nombre de un usuario.
-Web Service SOAP hecho en Java y Php 
-Web Service REST hecho en_
+Web Service SOAP y REST, que valida un rut y solicita el nombre de un usuario.
 
 ## Integrantes ✒️
 
